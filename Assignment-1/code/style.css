@@ -1,1 +1,68 @@
+.container{
+    width: auto;
+    height: auto;
+}
 
+.yellow .content{
+    background-color: rgb(243, 190, 43);
+    margin: 10px;
+    flex: 1 1 auto;
+    height: 200px;
+}
+
+.red .content{
+    background-color: rgb(243, 53, 85);
+    height: 200px;
+    margin: 10px;
+}
+
+.blue .content{
+    background-color: rgb(99, 105, 201);
+    margin: 10px;
+    height: 200px;
+    flex: 1 1 auto;
+}
+
+/*-------------------display Screen min-width=1024px--------------------- */
+@media only screen and (min-width:1024px) {
+    .yellow, .blue{
+        display: flex;
+    }
+
+}
+
+
+/*-------------------display Screen min-width=768px and max-width=1023px--------------------- */
+@media only screen and (min-width:768px) and (max-width:1023px){
+    .yellow{
+        display: flex;
+    }
+
+    .blue{
+        display: flex;
+        flex-direction: column;
+    }
+    
+}
+
+/*-------------------display Screen min-width=320px and max-width=767px--------------------- */
+@media only screen and (min-width:320px) and (max-width:767px){
+    .yellow{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .yellow .content{
+        height: 100px;
+    }
+
+    .blue{
+        display: flex;
+        flex-direction: column;
+    }
+    .blue .content{
+        height: 100px;
+        
+    }
+    
+}
